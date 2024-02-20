@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+main {
+  min-height: 80dvh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+section,
+article {
+  border: 1px solid red;
+}
+
+.header_app {
+  width: 100%;
+  padding-left: 4rem;
+  padding-top: 2rem;
+  font-size: xx-large;
+}
+
+.main_cont {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 66% 26%;
+  grid-template-rows: 1fr 2fr 1.5fr;
+}
+
+.search_wrap {
+  position: relative;
+  padding-bottom: 3.2rem;
+  grid-column: 1;
+}
+
+.search_wrap > label {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  font-size: x-large;
+}
+
+.search_bar {
+  border: none;
+  background-color: #e9e8e8;
+  padding: 1rem 2rem 1rem 3.2rem;
+}
+
+.trips_list_wrap {
+  grid-row: 2/3;
+}
+.week_weather_cont {
+  grid-row: 3/-1;
+}
+
+.weather_one_day {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+}

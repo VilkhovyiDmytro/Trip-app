@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import citiesReducer from "./citiesSlicer";
+import tripsReducer from "./tripsSlicer";
 import { cityWeatherApi } from "./citiesWeatherApi";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
 export const store = configureStore({
   reducer: {
-    cities: citiesReducer,
+    trips: tripsReducer,
     [cityWeatherApi.reducerPath]: cityWeatherApi.reducer,
   },
 

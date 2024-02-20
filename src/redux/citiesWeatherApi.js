@@ -10,10 +10,13 @@ export const cityWeatherApi = createApi({
   }),
   endpoints: (builder) => ({
     getWeatherOnTodayByCityName: builder.query({
-      query: (city) => `/${city}/${new Date().toISOString()}?key=${key}`,
+      query: (city) =>
+        // `/${lat},${lng}/${new Date().toISOString()}?key=${key}`,
+        `/${city}/today?unitGroup=metric&include=days&key=${key}&contentType=json`,
     }),
     getWeatherOnTripPeriod: builder.query({
-      query: (city, start, end) => `/${city}/${start}/${end}?key=${key}`,
+      query: (lat, lng, start, end) =>
+        `/${lat},${lng}/${start}/${end}?key=${key}`,
     }),
   }),
 });
