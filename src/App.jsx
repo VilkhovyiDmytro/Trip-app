@@ -116,14 +116,6 @@ function App() {
           {selectedTrip && <TodayTemperature trip={selectedTrip} />}
         </section>
       </main>
-      <button
-        onClick={() =>
-          scrollRef.current.scrollBy({ left: 50, behavior: "smooth" })
-        }
-      >
-        SCROLL
-      </button>
-      <footer></footer>
     </>
   );
 }
