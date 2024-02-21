@@ -25,7 +25,6 @@ function Timer({ targetDate }) {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Clear the timeout if the component is unmounted
     return () => clearTimeout(timer);
   });
 

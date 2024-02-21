@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
 import styles from "./TripCard.module.css";
-import { useGetWeatherOnTodayByCityNameQuery } from "../redux/citiesWeatherApi";
 import { useDispatch } from "react-redux";
 import { deleteTrip } from "../redux/tripsSlicer";
 

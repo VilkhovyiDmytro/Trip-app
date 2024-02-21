@@ -7,6 +7,7 @@
   align-items: center;
   row-gap: 1.2rem;
   background-color: rgba(187, 187, 187, 0.208);
+  padding: 0 1.4rem;
 }
 
 .wrapper h3 {

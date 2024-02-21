@@ -9,10 +9,9 @@ function WeekTemperature({ trip }) {
   );
 
   if (!data) return;
-  // console.log("DATAAAAAAA", data);
   return (
     <>
-      <h3>WATHER ON WEEK:</h3>
+      <h3>WEATHER ON WEEK:</h3>
       <ul className={styles.main_cont}>
         {data.days.map((day, i) => {
           return (

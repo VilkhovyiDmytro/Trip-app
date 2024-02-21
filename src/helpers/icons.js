@@ -6,6 +6,6 @@ export const icons = {
   cloudy: "☁️",
   partlycloudyday: "⛅",
   partlycloudynight: "☁️",
-  clearday: "🌅",
+  clearday: "☀️",
   clearnight: "🌆",
 };

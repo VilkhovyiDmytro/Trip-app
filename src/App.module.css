@@ -17,22 +17,18 @@ p {
   text-wrap: pretty;
 }
 
-/* width */
 ::-webkit-scrollbar {
   height: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -103,9 +99,7 @@ label::before {
 .list_of_trips {
   display: flex;
   align-items: center;
-  /* flex-wrap: wrap; */
   width: calc(100% - 22% - 2rem);
-  /* width: fit-content; */
   overflow-x: auto;
   height: 100%;
   column-gap: 4%;
@@ -131,7 +125,6 @@ label::before {
   min-width: 156px;
   background: #ebe9e9;
   margin-top: 2rem;
-  /* align-self: stretch; */
 }
 
 .addTrip p {

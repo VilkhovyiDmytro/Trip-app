@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import CityCard from "./components/TripCard";
 import { selectAttTrips } from "./redux/selectors";
 import { useEffect, useRef, useState } from "react";

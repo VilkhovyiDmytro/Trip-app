@@ -6,7 +6,6 @@ import styles from "./TodayTemperature.module.css";
 
 function TodayTemperature({ trip }) {
   const { data } = useGetWeatherOnTodayByCityNameQuery(trip.city.name);
-  // console.log("DATA", data);
 
   if (!data) return;
 
