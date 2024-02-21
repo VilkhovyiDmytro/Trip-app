@@ -17,35 +17,61 @@ p {
   text-wrap: pretty;
 }
 
-section,
-article {
-  border: 1px solid red;
+/* width */
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+ul {
+  list-style-type: none;
+}
+
+label::before {
+  content: "*";
+  color: red;
 }
 
 .header_app {
   width: 100%;
   padding-left: 4rem;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: xx-large;
 }
 
 .main_cont {
-  padding: 2rem 4rem;
+  padding: 0rem 4rem;
   display: grid;
-  grid-template-columns: 66% 26%;
-  grid-template-rows: 1fr 2fr 1.5fr;
+  grid-template-columns: 70% 26%;
+  grid-template-rows: 12vh 1fr 45vh;
 }
 
 .search_wrap {
   position: relative;
   padding-bottom: 3.2rem;
-  grid-column: 1;
+  grid-column: 1/-1;
+  border-bottom: 1px solid gray;
 }
 
-.search_wrap > label {
+.search_wrap > i {
   position: absolute;
   left: 0.6rem;
-  top: 0.6rem;
+  top: 0.4rem;
   font-size: x-large;
 }
 
@@ -57,12 +83,72 @@ article {
 
 .trips_list_wrap {
   grid-row: 2/3;
+  display: flex;
+  align-items: center;
 }
 .week_weather_cont {
   grid-row: 3/-1;
+  grid-column: 1/-1;
+  padding: 0.2rem 0;
+  overflow-x: auto;
+  height: fit-content;
+  border-top: 1px solid gray;
 }
 
 .weather_one_day {
   grid-column: 2/3;
-  grid-row: 1/-1;
+  grid-row: 2/3;
+}
+
+.list_of_trips {
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  width: calc(100% - 22% - 2rem);
+  /* width: fit-content; */
+  overflow-x: auto;
+  height: 100%;
+  column-gap: 4%;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+.list_of_trips > li {
+  height: 40vh;
+  margin-bottom: 1rem;
+  min-width: 130px;
+}
+
+.addTrip {
+  width: 22%;
+  border: 1px solid darkgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 2rem;
+  height: 26vh;
+  min-width: 156px;
+  background: #ebe9e9;
+  margin-top: 2rem;
+  /* align-self: stretch; */
+}
+
+.addTrip p {
+  font-size: 2.8vh;
+  font-weight: 800;
+}
+
+.addTrip:hover {
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: x-large;
+  padding-right: 0.3rem;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }

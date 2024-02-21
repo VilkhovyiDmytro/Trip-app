@@ -1,0 +1,18 @@
+.wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 1.2rem;
+}
+.wraper p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers {
+  font-weight: 700;
+  font-size: 1.6rem;
+}

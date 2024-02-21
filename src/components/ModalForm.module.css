@@ -1,0 +1,65 @@
+.bg_cont {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_wrap {
+  background-color: #fff;
+  width: 44vw;
+  height: 66vh;
+  padding: 0rem 2rem;
+  border-radius: 16px;
+}
+
+.header_modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal_wrap hr {
+  width: 94%;
+}
+
+.modal_wrap form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.label_input_wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+
+.error_text {
+  height: 1rem;
+  font-size: 1rem;
+  color: red;
+}
+
+.btn_wrap {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.btn_wrap button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid gray;
+}
+.btn_wrap button:hover {
+  background-color: gainsboro;
+  border: 1px solid rgb(97, 97, 97);
+  cursor: pointer;
+}

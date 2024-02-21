@@ -1,5 +1,6 @@
 import { getDetails, getGeocode, getLatLng } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
+import styles from "./PlacesAutoComplete.module.css";
 
 const PlacesAutocomplete = ({ onSetCity, values }) => {
   const {
@@ -17,8 +18,6 @@ const PlacesAutocomplete = ({ onSetCity, values }) => {
   const handleInput = (e) => {
     setValue(e.target.value);
   };
-
-  //  AIzaSyA25kEbbGNpgMtE_Dzx2XlU9heJZz3BPOI
 
   const handleSelect =
     ({ description }) =>
@@ -40,7 +39,7 @@ const PlacesAutocomplete = ({ onSetCity, values }) => {
       onSetCity({
         lat: lat,
         lng: lng,
-        name: `${response.address_components[0].short_name}, ${response.address_components[3].short_name}`,
+        name: `${response.address_components[0].short_name},${response.address_components[3].short_name}`,
         description: description,
         photo: data.photos[0].getUrl(),
         refToGoogleMap: data.url,
@@ -55,25 +54,36 @@ const PlacesAutocomplete = ({ onSetCity, values }) => {
       } = suggestion;
 
       return (
-        <li key={place_id} onClick={handleSelect(suggestion)}>
+        <li
+          key={place_id}
+          onClick={handleSelect(suggestion)}
+          className={styles.option_li}
+        >
           <strong>{main_text}</strong> <small>{secondary_text}</small>
         </li>
       );
     });
 
   return (
-    <div ref={ref}>
-      <input
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        placeholder="Where will your next trip be?"
-        onReset={() => {
-          setValue("");
-          clearSuggestions();
-        }}
-      />
-      {status === "OK" && <ul>{renderSuggestions()}</ul>}
+    <div ref={ref} className={styles.background_wrap}>
+      <label htmlFor="cityInput">City</label>
+      <div className={styles.input_wrap}>
+        <input
+          id="cityInput"
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          placeholder="Please start write and select a city "
+          required={true}
+          onReset={() => {
+            setValue("");
+            clearSuggestions();
+          }}
+        />
+        <div className={styles.sugg_cont}>
+          {status === "OK" && <dl>{renderSuggestions()}</dl>}
+        </div>
+      </div>
     </div>
   );
 };

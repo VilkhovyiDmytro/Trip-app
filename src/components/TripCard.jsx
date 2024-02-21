@@ -1,15 +1,30 @@
 /* eslint-disable react/prop-types */
 import styles from "./TripCard.module.css";
 import { useGetWeatherOnTodayByCityNameQuery } from "../redux/citiesWeatherApi";
+import { useDispatch } from "react-redux";
+import { deleteTrip } from "../redux/tripsSlicer";
 
-function CityCard({ city }) {
-  const { data } = useGetWeatherOnTodayByCityNameQuery(city.name);
-  console.log(data);
-  //   console.log(city);
+function CityCard({ city, setSelectedTrip }) {
+  const dispatch = useDispatch();
+
   return (
-    <li>
-      <img src={city.photo} className={styles.main_img} alt="" />
-      <p>{city.description}</p>
+    <li className={styles.wraper}>
+      <img
+        src={city.city.photo}
+        className={styles.main_img}
+        alt=""
+        onClick={() => setSelectedTrip(city)}
+      />
+      <button
+        className={styles.dlt_btn}
+        onClick={() => dispatch(deleteTrip(city.id))}
+      >
+        delete
+      </button>
+      <h6>{city.city.description}</h6>
+      <p>
+        {city.startDate} / {city.endDate}
+      </p>
     </li>
   );
 }

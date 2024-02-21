@@ -1,0 +1,36 @@
+.wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  border-radius: 12px;
+  border: 1px solid gray;
+  min-width: 7rem;
+}
+
+.main_cont {
+  display: flex;
+  column-gap: 2rem;
+  height: fit-content;
+
+  padding-bottom: 2rem;
+}
+
+.day {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.temp {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+}
+.date {
+  text-wrap: nowrap;
+}
